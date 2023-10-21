@@ -1,4 +1,5 @@
 import { useNavigate } from "react-router-dom";
+import SendIcon from "./../assets/text-message.png";
 import "./../styles/frame.css";
 
 type FrameProps = {
@@ -32,7 +33,10 @@ export const Frame: React.FC<FrameProps> = ({ id, image, name, slug, description
 			<section className="frame-messages"></section>
 
 			<section className="frame-input">
-
+				<input type="text" placeholder="Escreva a mensagem aqui..." />
+				<button>
+					<img src={SendIcon} alt="" />
+				</button>
 			</section>
 		</div>
 	);
