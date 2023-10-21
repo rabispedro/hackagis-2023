@@ -38,7 +38,7 @@ export const rooms: IRoomList[] = [
 				"name": "Mulheres de Areia",
 				"slug": "mulheres-de-areia",
 				"description": "Bate-papo da novela da globo que passa no Vale a Pena Ver Denovo!",
-				"online": true,
+				"online": false,
 				"watchers": 20
 			}
 		]

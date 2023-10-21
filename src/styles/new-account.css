@@ -1,0 +1,162 @@
+.new-account {
+	width: 100vw;
+	height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: flex-start;
+	background-color: darkorchid;
+	padding: 1rem;
+}
+
+
+.new-account-section {
+	width: 100%;
+	height: 55%;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: blueviolet;
+	border: 0.16rem solid snow;
+	border-radius: 1rem;
+	padding: 0 0.4rem;
+}
+
+.new-account-section > h2 {
+	font-weight: 700;
+	color: snow;
+	font-size: 1.4rem;
+	height: 10%;
+}
+
+.new-account-field {
+	display: flex;
+	flex-direction: column;
+	width: 100%;
+	height: 50%;
+}
+
+.new-account-input {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 100%;
+	height: 20%;
+	margin: 0.2rem 0;
+}
+
+.new-account-input > label {
+	display: flex;
+	width: 20%;
+	font-weight: 700;
+	color: snow;
+	font-size: 1rem;
+}
+
+.new-account-input > input {
+	display: flex;
+	width: 75%;
+	background-color: snow;
+	color: black;
+	border: 0.15rem solid darkgray;
+	border-radius: 0.2rem;
+}
+
+.new-account-step-one > button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	font-size: 1.2rem;
+	font-weight: 700;
+	margin-top: 2rem;
+	border-radius: 1rem;
+	border: 0.2rem solid snow;
+	background-color: deeppink;
+}
+
+.new-account-step-two > h3 {
+	font-weight: 700;
+	color: snow;
+	font-size: 1.2rem;
+	height: 15%;
+}
+
+.new-account-step-two > a {
+	color: snow;
+	text-decoration: underline;
+	margin-top: 0.4rem;
+	font-size: 0.8rem;
+}
+
+.new-account-step-two > button {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	font-size: 1.2rem;
+	font-weight: 700;
+	margin-top: 2rem;
+	border-radius: 1rem;
+	border: 0.2rem solid snow;
+	background-color: deeppink;
+}
+
+.new-account-create-account {
+	display: flex;
+	align-items: flex-end;
+	justify-content: center;
+	text-decoration: none;
+	width: 100%;
+	height: 12%;
+}
+
+.new-account-create-account > a {
+	text-decoration: underline;
+	color: snow;
+}
+
+.new-account-step-three {
+	width: 100%;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+
+.new-account-step-three > h3 {
+	font-weight: 700;
+	color: snow;
+	font-size: 1.2rem;
+}
+
+.new-account-interest {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	overflow: scroll;
+	align-items: center;
+	justify-content: center;
+	scroll-behavior: smooth;
+	width: 100%;
+}
+
+.new-account-step-three > a {
+	display: flex;
+	width: 100%;
+	height: 2rem;
+	align-items: center;
+	justify-content: center;
+	border-radius: 1rem;
+	background-color: crimson;
+	border: 0.2rem solid snow;
+	font-size: 1.2rem;
+}
+
+.new-account-step-three > a > p {
+	color: snow;
+	font-weight: 700;
+	margin: 0;
+}

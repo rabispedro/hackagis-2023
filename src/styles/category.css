@@ -1,0 +1,38 @@
+.category {
+	width: 100vw;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: darkorchid;
+	padding: 1rem;
+}
+
+.category-content {
+	display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 80%;
+}
+
+.category-content > section {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	width: 100%;
+}
+
+.category-content > section > h1 {
+	width: 100%;
+	margin: 0.4rem 0;
+	text-align: center;
+	text-transform: capitalize;
+	font-size: 1.8rem;
+	color: snow;
+	font-weight: 700;
+}
