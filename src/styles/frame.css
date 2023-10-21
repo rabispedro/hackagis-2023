@@ -1,0 +1,75 @@
+.frame {
+	display: flex;
+	flex-wrap: nowrap;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: calc(100vh - 20%);
+	background-color: forestgreen;
+	margin: 1rem 0;
+}
+
+.frame-stream {
+	display: flex;
+	width: 100%;
+	height: 40%;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	background-color: steelblue;
+}
+
+.frame-stream > img {
+	width: 100%;
+}
+
+.frame-description {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 0.4rem 1rem;
+
+	justify-content: center;
+}
+
+.frame-description > h1 {
+	font-size: 2rem;
+	color: snow;
+	font-weight: 700;
+}
+
+.frame-description > h2 {
+	font-size: 1rem;
+	color: snow;
+	font-weight: 700;
+}
+
+.frame-stream > button {
+	margin: 0;
+	background-color: fuchsia;
+	align-self: flex-end;
+}
+
+
+.frame-messages {
+	display: flex;
+	width: 100%;
+	height: 16rem;
+	align-items: center;
+	justify-content: flex-start;
+	overflow: scroll;
+	flex-direction: column;
+	background-color: blue;
+}
+
+.frame-input {
+	display: flex;
+	width: 100%;
+	height: 5rem;
+	align-items: center;
+	justify-content: flex-start;
+	overflow: scroll;
+	flex-direction: column;
+	background-color: green;
+}
