@@ -3,6 +3,11 @@ import { Splash } from './pages/splash'
 import { Login } from './pages/login'
 import { Home } from './pages/home'
 import { Category } from './pages/category'
+import { Room } from './pages/room'
+import { Help } from './pages/help'
+import { Forgot } from './pages/forgot'
+import { Market } from './pages/market'
+import { NewAccount } from './pages/new-account'
 
 function App() {
 
@@ -12,10 +17,12 @@ function App() {
 				<Route path='/' element={<Splash />} />
 				<Route path='/login' element={<Login />} />
 				<Route path='/home' element={<Home />} />
-				{/* <Route path='/new' element={<NewAccount />} />
+				<Route path='/room/:slug' element={<Room />} />
+				<Route path='/help' element={<Help />} />
+				<Route path='/market' element={<Market />} />
 				<Route path='/forgot' element={<Forgot />} />
-				<Route path='/room/:slug' element={<Room slug="slug" />} /> */}
-				<Route path='/category/:slug' element={<Category slug="slug" />} />
+				<Route path='/new' element={<NewAccount />} />
+				<Route path='/category/:category' element={<Category />} />
 			</Routes>
     </BrowserRouter>
   )

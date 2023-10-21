@@ -1,11 +1,13 @@
-type CategoryProps = {
-	slug: string;
-}
+import { useParams } from "react-router-dom";
+import { InlineHeader } from "../components/inline-header";
 
-export const Category: React.FC<CategoryProps> = ({ slug } : CategoryProps) => {
+export const Category: React.FC = () => {
+	const { category } = useParams();
+	
 	return (
 		<div className="category">
-			<h1>{slug}</h1>
+			<InlineHeader />
+			<h1>{category}</h1>
 		</div>
 	);
 }

@@ -7,7 +7,7 @@ export const Hamburguer: React.FC = () => {
 	
 	return (
 		<div className="hamburguer" onClick={() => handleHamburguer()}>
-			<h1>Categorias</h1>
+			<h1>CAT.</h1>
 		</div>
 	);
 }

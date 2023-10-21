@@ -4,6 +4,7 @@ import MagnifyIcon from "./../assets/lupa.png";
 import { Header } from "./header";
 
 import "./../styles/inline-header.css";
+import { Link } from "react-router-dom";
 
 export const InlineHeader: React.FC = () => {
 	return (
@@ -12,9 +13,12 @@ export const InlineHeader: React.FC = () => {
 
 			<Header />
 
-			<img src={PurchaseIcon} alt="" />
-
-			<img src={MagnifyIcon} alt="" />
+			<section className="inline-header-icons">
+				<Link to={'/market'}>
+					<img src={PurchaseIcon} alt="" />
+				</Link>
+				<img src={MagnifyIcon} alt="" />
+			</section>
 		</div>
 	);
 }

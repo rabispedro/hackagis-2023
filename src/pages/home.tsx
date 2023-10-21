@@ -8,10 +8,17 @@ import "./../styles/home.css";
 export const Home: React.FC = () => {
 	const db = rooms.map(rooms => rooms.list).flatMap(room => room);
 	const [list, setList] = useState<IRoom[]>([]);
+	const [listPopular, setListPopular] = useState<IRoom[]>([]);
+	const [listTop, setListTop] = useState<IRoom[]>([]);
 
 	useEffect(() => {
 		setList(db);
 	}, []);
+
+	useEffect(() => {
+		setListTop(list.filter(room => room.watchers >= 200 && room.online));
+		setListPopular(list.filter(room => room.watchers >= 20 && room.online));
+	},[list]);
 
 	console.log(list);
 
@@ -24,7 +31,7 @@ export const Home: React.FC = () => {
 					<h1>Destaques</h1>
 
 					{
-						list
+						listTop
 						.map((room, key) => {
 							return <Card description={room.description} id={room.id} image={room.image} name={room.name} isOnline={room.online} slug={room.slug} watchers={room.watchers} key={key} />
 						})
@@ -35,7 +42,7 @@ export const Home: React.FC = () => {
 				<section>
 					<h1>Populares</h1>
 					{
-						list
+						listPopular
 						.map((room, key) => {
 							return <Card description={room.description} id={room.id} image={room.image} name={room.name} isOnline={room.online} slug={room.slug} watchers={room.watchers} key={key} />
 						})
