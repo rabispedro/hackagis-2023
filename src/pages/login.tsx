@@ -1,8 +1,7 @@
 import HeadsetIcon from "./../assets/headset.png";
-import FacebookIcon from "./../assets/facebook.png";
-import LogoIcon from "./../assets/react.svg";
 import { Link, useNavigate } from "react-router-dom";
 import "./../styles/login.css";
+import { Header } from "../components/header";
 
 export const Login: React.FC = () => {
 	const navigate = useNavigate();
@@ -13,10 +12,7 @@ export const Login: React.FC = () => {
 	
 	return (
 		<div className="login">
-			<header className="login-header">
-				<img src={LogoIcon} alt="" />
-				<h1>Praça</h1>
-			</header>
+			<Header />
 
 			<section className="login-section">
 				<h2>Entrar no Aplicativo</h2>
@@ -33,14 +29,18 @@ export const Login: React.FC = () => {
 					</div>
 
 					<button onClick={() => handleLogin()}>Entrar</button>
+					<Link to={'/forgot'}>Esqueci minha senha</Link>
 				</section>
 
 				<p>OU</p>
 
 				<section className="login-facebook">
 					<Link to={'/home'}>
-						<img src={FacebookIcon} alt="Icone do Facebook" />
-						<p>Entrar com Facebook</p>
+						<p>Facebook</p>
+					</Link>
+
+					<Link to={'/home'}>
+						<p>Google</p>
 					</Link>
 				</section>
 

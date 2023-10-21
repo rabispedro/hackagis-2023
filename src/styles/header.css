@@ -1,0 +1,19 @@
+.header {
+	width: 100%;
+	height: 15%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.header > h1 {
+	font-weight: 700;
+	color: snow;
+	font-size: 2rem;
+}
+
+.header > img {
+	width: 3rem;
+	height: 3rem;
+	margin-right: 1rem;
+}

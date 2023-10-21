@@ -1,45 +1,48 @@
+import { useEffect, useState } from "react";
+import { Card } from "../components/card";
+import { InlineHeader } from "../components/inline-header";
 import { rooms } from "../databases/rooms";
-import LogoIcon from "./../assets/react.svg";
+import { IRoom } from "../types/room";
 import "./../styles/home.css";
 
 export const Home: React.FC = () => {
-	const db = rooms;
-	
+	const db = rooms.map(rooms => rooms.list).flatMap(room => room);
+	const [list, setList] = useState<IRoom[]>([]);
+
+	useEffect(() => {
+		setList(db);
+	}, []);
+
+	console.log(list);
+
 	return (
 		<main className="home">
-			<header className="home-header">
-				<img src={LogoIcon} alt="" />
-				<h1>Praça</h1>
-			</header>
+			<InlineHeader />
 
-			<section>
-				<p>Atenção: usando este site, você concorda que tem, no mínimo, 18 anos aceita nossos <a href="">termos de uso</a>.</p>
+			<div className="home-content">
+				<section>
+					<h1>Destaques</h1>
 
-				<select>
-					<option value="geral">Geral</option>a
-					<option value="religiao">Religião</option>
-					<option value="forro">Forró</option>
-					<option value="salao">Dança de Salão</option>
-					<option value="cartas">Jogos de Cartas</option>
-					<option value="">Jogos de </option>
-					<option value="novela">Novela</option>
-				</select>
-			</section>
+					{
+						list
+						.map((room, key) => {
+							return <Card description={room.description} id={room.id} image={room.image} name={room.name} isOnline={room.online} slug={room.slug} watchers={room.watchers} key={key} />
+						})
+					};
 
-			<section>
-				{
-					db.map((room) => {
-						return (
-							<>
-							<h1>Categoria: {room.category}</h1>
-							</>
-						)
-					})
-				}
-			</section>
+				</section>
 
-			<footer>
-			</footer>
+				<section>
+					<h1>Populares</h1>
+					{
+						list
+						.map((room, key) => {
+							return <Card description={room.description} id={room.id} image={room.image} name={room.name} isOnline={room.online} slug={room.slug} watchers={room.watchers} key={key} />
+						})
+					}
+				</section>
+			</div>
+
 		</main>
 	);
 }

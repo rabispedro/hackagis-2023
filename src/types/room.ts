@@ -5,4 +5,5 @@ export interface IRoom {
 	slug: string;
 	description: string;
 	online: boolean;
+	watchers: number;
 }
