@@ -1,4 +1,3 @@
-import HeadsetIcon from "./../assets/headset.png";
 import { Link, useNavigate } from "react-router-dom";
 import "./../styles/login.css";
 import { Header } from "../components/header";
@@ -53,7 +52,6 @@ export const Login: React.FC = () => {
 
 			<footer className="login-footer">
 				<Link to={'/help'}>
-					<img src={HeadsetIcon} alt="Icone de microfone" />
 					<p>Preciso de ajuda</p>
 				</Link>
 			</footer>

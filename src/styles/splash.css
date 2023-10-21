@@ -5,37 +5,30 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	background-color: darkorchid;
+	background-color: var(--thirdiary-color);
 	padding: 2rem;
 }
 
 @keyframes splash-spin {
-	from {
-		transform: rotate(0deg);
+	0% {
+		transform: scale(0.2);
 	}
-	to {
-		transform: rotate(180deg);
+	50% {
+		transform: scale(1);
+	}
+	100% {
+		transform: scale(0.2);
 	}
 }
 
 .splash > h1 {
 	font-weight: 700;
-	color: snow;
+	color: black;
 	margin-bottom: 4rem;
 	font-size: 2.2rem;
 }
 
 .splash > img {
-	animation: splash-spin infinite 800ms ease-in-out;
+	animation: splash-spin infinite 1600ms ease-in-out;
 }
 
-.splash > a {
-	color: snow;
-	margin-top: 4rem;
-	border-radius: 2rem;
-	width: 50%;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	border: 2px solid darkmagenta;
-}

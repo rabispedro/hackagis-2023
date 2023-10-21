@@ -1,0 +1,22 @@
+.faq-message {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background-color: var(--primary-color);
+	border-radius: 1rem;
+	padding: 0 1rem;
+	margin: 1rem 0;
+}
+
+.faq-message > h1 {
+	font-size: 1.6rem;
+	margin-bottom: 0.6rem;
+	color: snow;
+	margin: 0.6rem 0 0 0;
+}
+
+.faq-message > p {
+	font-size: 1rem;
+	color: snow;
+}

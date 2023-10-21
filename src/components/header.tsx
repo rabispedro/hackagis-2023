@@ -1,5 +1,5 @@
 import "./../styles/header.css";
-import LogoIcon from "./../assets/react.svg";
+import LogoIcon from "./../assets/logo.png";
 
 export const Header: React.FC = () => {
 	return (
