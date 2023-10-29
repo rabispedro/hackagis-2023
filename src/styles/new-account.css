@@ -9,7 +9,6 @@
 	padding: 1rem;
 }
 
-
 .new-account-section {
 	width: 100%;
 	height: 55%;
@@ -118,7 +117,6 @@
 .new-account-step-three {
 	width: 100%;
 	display: flex;
-	flex-direction: column;
 	flex-wrap: wrap;
 	align-items: center;
 	justify-content: center;
@@ -132,13 +130,14 @@
 
 .new-account-interest {
 	display: flex;
-	flex-direction: column;
 	flex-wrap: wrap;
 	overflow: scroll;
 	align-items: center;
 	justify-content: center;
 	scroll-behavior: smooth;
 	width: 100%;
+	height: 25rem;
+	margin-bottom: 1rem;
 }
 
 .new-account-step-three > a {

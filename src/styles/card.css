@@ -4,12 +4,11 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	width: 45%;
+	width: 75%;
 	height: 12rem;
-	margin: 0.5rem;
-	border: 0.1rem solid black;
+	margin: 0.8rem 0.3rem;
+	box-shadow:  2px 2px 10px 4px green;
 	background-color: steelblue;
-	border-radius: 1rem;
 }
 
 .card-is-online-false {
@@ -18,19 +17,17 @@
 	flex-direction: column;
 	align-items: center;
 	justify-content: center;
-	width: 45%;
+	width: 75%;
 	height: 12rem;
-	margin: 0.5rem;
-	border: 0.2rem solid purple;
-	background-color: darkgrey;
-	border-radius: 1rem;
+	margin: 0.8rem 0.3rem;
+	box-shadow:  2px 2px 10px 4px green;
+	background-color: steelblue;
 	filter: grayscale(1);
 }
 
 .card-is-online-true > img {
 	width: 100%;
 	height: 80%;
-	border-radius: 1rem 1rem 0 0;
 }
 
 .card-is-online-true > h1 {
@@ -45,7 +42,6 @@
 .card-is-online-false > img {
 	width: 100%;
 	height: 80%;
-	border-radius: 1rem 1rem 0 0;
 }
 
 .card-is-online-false > h1 {

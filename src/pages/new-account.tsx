@@ -2,23 +2,37 @@ import { useEffect, useState } from 'react';
 import { Header } from '../components/header';
 import './../styles/new-account.css'
 import { Link } from 'react-router-dom';
-import { rooms } from '../databases/rooms';
-import { IRoom } from '../types/room';
-import { Card } from '../components/card';
+import { categories } from '../databases/categories';
+import { ICategory } from '../types/category';
+import { CheckableCard } from '../components/checkable-card';
 
 export const NewAccount: React.FC = () => {
 	const [step, setStep] = useState<number>(1);
 	const [addReliable, setAddReliable] = useState<boolean>(false);
 
-	const db = rooms.map(rooms => rooms.list).flatMap(room => room).filter(room => room.online);
-	const [list, setList] = useState<IRoom[]>([]);
+	const db = categories;
+	const [list, setList] = useState<ICategory[]>([]);
 
 	useEffect(() => {
 		setList(db);
 	}, []);
 
 	const handleNextStep = () => {
-		setStep((prev) => prev+1);
+		setStep((prev) => {
+			if(prev < 3)
+				return prev+1;
+			else 
+				return 3;
+		});
+	}
+
+	const handlePreviousStep = () => {
+		setStep((prev) => {
+			if(prev > 1)
+				return prev-1;
+			else
+				return 1;
+		});
 	}
 
 	const handleAddReliable = () => {
@@ -51,6 +65,7 @@ export const NewAccount: React.FC = () => {
 									<input type="text" placeholder="(34) 9 1234-5678" />
 								</div>
 
+								<button onClick={() => handlePreviousStep()}>Voltar</button>
 								<button onClick={() => handleNextStep()}>Continuar</button>
 							</section>
 						): (<></>))
@@ -70,6 +85,7 @@ export const NewAccount: React.FC = () => {
 									<input type="text" placeholder="(34) 9 1234-5678" />
 								</div>
 
+								<button onClick={() => handlePreviousStep()}>Voltar</button>
 								<button onClick={() => handleNextStep()}>Continuar</button>
 							</section>
 						): (<></>))
@@ -83,8 +99,8 @@ export const NewAccount: React.FC = () => {
 								<div className='new-account-interest'>
 									{
 										list
-										.map((room, key) => {
-											return <Card description={room.description} id={room.id} image={room.image} name={room.name} isOnline={room.online} slug={room.slug} watchers={room.watchers} key={key} />
+										.map((category, key) => {
+											return <CheckableCard id={category.id} image={category.image} name={category.name} slug={category.slug} key={key} />
 										})
 									}
 								</div>
